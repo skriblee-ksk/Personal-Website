@@ -313,12 +313,12 @@ header li{
     display:none;
 }
 
-/*calander stuff*/
-.calender h1{
+/*calender stuff*/
+.calendar h1{
     text-align: center;
     padding-top: 2%;
 }
-.calender body {
+.calendar body {
     height: 100%;
     background-color: #f2f2f2;
   }
