@@ -1,4 +1,317 @@
+/*Animation*/
+@keyframes zoom-in{
+    from{
+        opacity: 0%;
+        transform: scale(1.2, 1.2);
+    }
+    to{
+        opacity: 100%;
+        transform: scale(auto);
+    }
+}
 
+@keyframes appear{
+    from{
+        opacity: 0%;
+        transform: translate(0px, 20px);
+    }
+    to{
+        opacity: 100%;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes upward{
+    from{
+        transform: translateY(100vh) scale(1);
+    }
+    to{
+        transform: translateY(0vh) scale(0);
+    }
+}
+
+hr, .icon{
+    animation: zoom-in 1s forwards;
+}
+
+.a1, h1, h5{
+    animation: appear 1s forwards;
+}
+
+.a1-5, h4, h5{
+    animation: appear 1.5s forwards;
+}
+
+.a2, h6{
+    animation: appear 2s forwards;
+}
+
+.a2-5{
+    animation: appear 2.5s forwards;
+}
+
+.cus{
+    opacity:0%;
+    animation: appear 1s forwards;
+    animation-delay: calc(1s*var(--i));
+}
+
+/*Bg*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: linear-gradient(to right, #e9f5dc, #c8e8de);
+    align-items: center;
+    height: 100%;
+}
+
+
+/*index*/
+.icon{
+  border-radius: 50%;
+  max-width:170px;
+  max-height:170px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-color:#6cd64b;
+  border-style:dashed;
+  margin-bottom:15px;
+}
+
+.main{
+    background-color:rgba(255,255,255,0.5);
+    background-blend-mode:lighten;
+    padding:30px;
+    border-radius:5%;
+}
+
+/*Divs for hobbies and projects*/
+.sec{
+    background-color:rgba(255,255,255,0.5);
+    background-blend-mode:lighten;
+    padding:10px;
+    border-radius:5%;
+    margin-bottom: 20px;
+}
+
+.sec-img{
+    border-radius: 10%;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    width: 100%;
+    max-height: 250px;
+}
+
+.sec-hr{
+    color:#187d5a;
+}
+
+/*When the screen's larger*/
+@media screen and (min-width:992px){
+    .navbar .container-fluid, .navbar-expand-lg .navbar-nav, .navbar-expand-lg .navbar-collapse{
+        flex-direction:column;
+    }
+    
+    .navbar{
+        height:100vh;
+    }
+    
+    header{
+        border-right-style:solid;
+        width:25%;
+        position:fixed;
+    }
+    
+    main{
+        padding-left:10%;
+        padding-right:10%;
+    }
+    
+    footer, main{
+        margin-left:25%;
+    }
+
+    footer{
+        width:75%;
+    }
+
+    body{
+        height:100vh;
+    }
+
+    .carousel-img{
+        max-width:800px;
+    }
+    
+    .container-bg{
+        min-height:100vh;
+    }
+}
+
+/*When the screen's smaller*/
+@media screen and (max-width:992px){
+    header{
+        border-bottom-style:solid;
+    }
+    
+    .main-side{
+        margin:10%;
+        margin-top:35px;
+    }
+
+    footer{
+        width:100%;
+    }
+}
+
+.navbar-brand{
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.nav-item{
+    font-family:'Bitter';
+}
+
+header{
+    border-color:#6cd64b;
+    background:url(img/clouds.jpg);
+    background-size:cover;
+    background-position:center;
+    
+}
+
+main{
+    padding:10vh;
+}
+
+footer{
+    bottom:0px;
+    background-color:white;
+    text-align: center;
+}
+
+.main-footer{
+    position:absolute;
+}
+
+/*General*/
+h1, h2, h3, h4, h5, p{
+    text-align:center;
+    color:#063827;
+}
+
+h3, h4, h5{
+    font-family:'Bitter';
+    
+}
+
+h1{
+    font-weight:bolder;
+    font-family:'Playfair Display SC';
+    background: linear-gradient(to right, #cafc95, #5ac938, #1fa672, #1fa672);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size:40px;
+}
+
+h2{
+    font-weight:bold;
+    font-family:'Playfair Display SC';
+    background: linear-gradient(to right, #3abd71, #5ac938, #1fa672, #008051);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h4{
+    color:#58c938;
+}
+
+p{
+    font-family:'Karla';
+    margin-bottom:1px;
+    color:#054d34;
+}
+
+li{
+    font-family:'Karla';
+    list-style-type: '✦';
+    padding-inline-start: 2ch;
+    color:#054d34;
+    margin-top:15px;
+}
+
+hr{
+    color:#6cd64b;
+}
+
+/*Specifics*/
+
+.btn{
+    font-family:'Bitter';
+    font-variant: small-caps;
+    font-weight:bold;
+    color:#0d3628;
+    background: url(images/clouds.jpg);
+    background-size:cover;
+}
+
+.emph{
+    color:Green; 
+    font-weight:Bold;
+    font-style:italic;
+}
+
+.space{
+    height:50px;
+}
+
+.col-lg img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: 25% 25%;
+    align-items:center;
+    border-color:white; 
+    border-style:solid;
+}
+
+.col-lg{
+    margin-bottom:10px;
+}
+
+.sm{
+    font-size: 14px;
+}
+
+.whiten{
+    text-shadow: #0e8056 2px 2px 4px; 
+    color:white;
+    font-weight:bold;
+}
+
+header li{
+    list-style-type: '';
+    font-size:17px;
+    margin-top:0px;
+}
+
+.btn:hover{
+    border-color:#41a123;
+    color:#106145;
+}
+
+/*ids*/
+#terms, #prices, #hb, #fb, #ref{
+    display:none;
+}
 
 /*calander stuff*/
 .calender h1{
